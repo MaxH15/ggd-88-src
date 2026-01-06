@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ug5utawvsiu4"
+path="res://.godot/imported/SLIDE RELEASE.ogg-a48ad151f0b925f83011c39e7ddf4138.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/game/slide/level1/SLIDE RELEASE.ogg"
+dest_files=["res://.godot/imported/SLIDE RELEASE.ogg-a48ad151f0b925f83011c39e7ddf4138.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
