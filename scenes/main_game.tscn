@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://bifyvx4bk8g48"]
+
+[ext_resource type="PackedScene" uid="uid://uwn6f6x4ncpf" path="res://scenes/objects/player.tscn" id="2_0rdsr"]
+[ext_resource type="PackedScene" uid="uid://bdqxgncjgtqe6" path="res://scenes/ui/UI.tscn" id="2_ipu61"]
+[ext_resource type="PackedScene" uid="uid://d07vv2y648s3x" path="res://scenes/backgrounds/background_1.tscn" id="2_wi4c7"]
+[ext_resource type="PackedScene" uid="uid://tt7ok64itm0v" path="res://scenes/objects/game_camera.tscn" id="2_ygxny"]
+[ext_resource type="PackedScene" uid="uid://bmihokc6qi1id" path="res://scenes/objects/chunks/chunk_loader.tscn" id="4_0rdsr"]
+
+[node name="MainGame" type="Node2D"]
+
+[node name="GameCamera" parent="." instance=ExtResource("2_ygxny")]
+position = Vector2(832, 384)
+camera_distance_x = 500.0
+
+[node name="Background1" parent="." instance=ExtResource("2_wi4c7")]
+position = Vector2(960, 544)
+
+[node name="Player" parent="." instance=ExtResource("2_0rdsr")]
+position = Vector2(72, 408)
+
+[node name="ChunkLoader" parent="." instance=ExtResource("4_0rdsr")]
+
+[node name="Ui" parent="." instance=ExtResource("2_ipu61")]

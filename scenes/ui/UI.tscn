@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdqxgncjgtqe6"]
+
+[ext_resource type="Script" uid="uid://qdksge2jm7j7" path="res://scripts/ui/ui.gd" id="1_d2gw2"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_d2gw2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 448.0
+offset_bottom = 168.0
+color = Color(0, 0, 0, 0.54509807)
+
+[node name="Debug" type="VBoxContainer" parent="."]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 150.0
+offset_bottom = 101.0
+
+[node name="Speed" type="Label" parent="Debug"]
+layout_mode = 2
+text = "Speed: "
+
+[node name="SpeedMod" type="Label" parent="Debug"]
+layout_mode = 2
+text = "Speed Mod: "
+
+[node name="PlayerState" type="Label" parent="Debug"]
+layout_mode = 2
+text = "Player State:"
+
+[node name="Inventory" type="Label" parent="Debug"]
+layout_mode = 2
+text = "Upgrades: "
+
+[node name="Damage" type="Label" parent="Debug"]
+layout_mode = 2
+text = "Damage Taken: "

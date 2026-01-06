@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://tt7ok64itm0v"]
+
+[ext_resource type="Script" uid="uid://c63qnvmkxh36f" path="res://game_camera.gd" id="1_4rmf7"]
+
+[node name="GameCamera" type="Camera2D"]
+script = ExtResource("1_4rmf7")
+camera_distance_x = 550.0

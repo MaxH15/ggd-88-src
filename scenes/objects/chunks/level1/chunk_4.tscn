@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://7f3ca17ic0wm"]
+
+[ext_resource type="Script" uid="uid://ckc35svedq0gl" path="res://scripts/objects/world/chunks/Chunk.gd" id="1_njqb0"]
+[ext_resource type="Script" uid="uid://wweayw75nxbx" path="res://scripts/objects/world/Platform.gd" id="2_rxx4g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkw66"]
+size = Vector2(304, 79)
+
+[node name="Chunk" type="Node2D"]
+script = ExtResource("1_njqb0")
+chunk_width = 1920.0
+metadata/_custom_type_script = "uid://ckc35svedq0gl"
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(56, 632)
+script = ExtResource("2_rxx4g")
+speed_modifier = 0.3
+metadata/_custom_type_script = "uid://wweayw75nxbx"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+position = Vector2(96, -80.5)
+shape = SubResource("RectangleShape2D_nkw66")
+
+[node name="Polygon2D" type="Polygon2D" parent="Platform3"]
+position = Vector2(96.00001, -80)
+scale = Vector2(0.90693694, 4.9375)
+color = Color(0.3764706, 0.3764706, 0.3764706, 1)
+polygon = PackedVector2Array(-167.59712, -8.101265, 167.59712, -8.101265, 167.59712, 8.101265, 0, 8.101265, -167.59712, 8.101265, -167.5971, -0.9811325)
+
+[node name="SlowSlope2" type="StaticBody2D" parent="."]
+position = Vector2(632, 176)
+script = ExtResource("2_rxx4g")
+metadata/_custom_type_script = "uid://wweayw75nxbx"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SlowSlope2"]
+position = Vector2(528, 80)
+polygon = PackedVector2Array(600, 256, 600, 576, 272, 576)
+
+[node name="Polygon2D" type="Polygon2D" parent="SlowSlope2"]
+position = Vector2(400, 8)
+color = Color(1, 0.92941177, 0, 1)
+polygon = PackedVector2Array(728, 648, 400, 648, 728, 328)
+
+[node name="Big Drop" type="StaticBody2D" parent="."]
+position = Vector2(-728, 192)
+script = ExtResource("2_rxx4g")
+metadata/_custom_type_script = "uid://wweayw75nxbx"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Big Drop"]
+position = Vector2(-149.70023, 80)
+scale = Vector2(3.715145, 1)
+polygon = PackedVector2Array(296.00464, 560, 296.00464, 240, 319.69147, 240, 319.69147, 488, 645.3854, 488, 645.3854, 560, 408, 560)
+
+[node name="Polygon2D" type="Polygon2D" parent="Big Drop"]
+position = Vector2(-1210, 8)
+scale = Vector2(4.644231, 1)
+color = Color(0.3764706, 0.3764706, 0.3764706, 1)
+polygon = PackedVector2Array(744.5797, 632, 465.09317, 632, 465.09317, 312, 484.0414, 312, 484.0414, 560, 744.5797, 560)
+
+[node name="IceSlope2" type="StaticBody2D" parent="."]
+position = Vector2(8, 8)
+script = ExtResource("2_rxx4g")
+speed_modifier = 0.4
+metadata/_custom_type_script = "uid://wweayw75nxbx"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="IceSlope2"]
+polygon = PackedVector2Array(600, 448, 960, 576, 600, 576)
+
+[node name="Polygon2D" type="Polygon2D" parent="IceSlope2"]
+color = Color(0.14117648, 1, 1, 1)
+polygon = PackedVector2Array(600, 448, 600, 576, 960, 576)

@@ -1,0 +1,122 @@
+[gd_scene load_steps=6 format=3 uid="uid://bv2i766gdonlb"]
+
+[ext_resource type="Script" uid="uid://ckc35svedq0gl" path="res://scripts/objects/world/chunks/Chunk.gd" id="1_1qlqt"]
+[ext_resource type="Script" uid="uid://wweayw75nxbx" path="res://scripts/objects/world/Platform.gd" id="2_htdgb"]
+[ext_resource type="Script" uid="uid://esphwcmf1e7j" path="res://scripts/objects/world/Obstacle.gd" id="3_htdgb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkw66"]
+size = Vector2(1920, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p00iu"]
+size = Vector2(64, 64)
+
+[node name="Chunk" type="Node2D"]
+script = ExtResource("1_1qlqt")
+chunk_width = 3840.0
+metadata/_custom_type_script = "uid://ckc35svedq0gl"
+
+[node name="Platform" type="StaticBody2D" parent="."]
+position = Vector2(176, 632)
+script = ExtResource("2_htdgb")
+speed_modifier = 0.3
+metadata/_custom_type_script = "uid://wweayw75nxbx"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(784, -88)
+shape = SubResource("RectangleShape2D_nkw66")
+
+[node name="Polygon2D" type="Polygon2D" parent="Platform"]
+position = Vector2(784, -87.999985)
+scale = Vector2(5.728022, 3.9500015)
+color = Color(0.3764706, 0.3764706, 0.3764706, 1)
+polygon = PackedVector2Array(-167.59712, -8.101265, 167.59712, -8.101265, 167.59712, 8.101265, 0, 8.101265, -167.59712, 8.101265)
+
+[node name="ColorRect" type="ColorRect" parent="Platform"]
+offset_left = -176.0
+offset_top = -120.0
+offset_right = -112.0
+offset_bottom = -56.0
+color = Color(0, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="Platform"]
+offset_left = 1680.0
+offset_top = -120.0
+offset_right = 1744.0
+offset_bottom = -56.0
+color = Color(1, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(2096, 632)
+script = ExtResource("2_htdgb")
+speed_modifier = 0.3
+metadata/_custom_type_script = "uid://wweayw75nxbx"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+position = Vector2(784, -88)
+shape = SubResource("RectangleShape2D_nkw66")
+
+[node name="Polygon2D" type="Polygon2D" parent="Platform2"]
+position = Vector2(784, -87.999985)
+scale = Vector2(5.728022, 3.9500015)
+color = Color(0.3764706, 0.3764706, 0.3764706, 1)
+polygon = PackedVector2Array(-167.59712, -8.101265, 167.59712, -8.101265, 167.59712, 8.101265, 0, 8.101265, -167.59712, 8.101265)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2"]
+offset_left = -176.0
+offset_top = -120.0
+offset_right = -112.0
+offset_bottom = -56.0
+color = Color(0, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="Platform2"]
+offset_left = 1680.0
+offset_top = -120.0
+offset_right = 1744.0
+offset_bottom = -56.0
+color = Color(1, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Obstacle2" type="Area2D" parent="."]
+position = Vector2(1312, 480)
+script = ExtResource("3_htdgb")
+speed_impact = 200.0
+metadata/_custom_type_script = "uid://esphwcmf1e7j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle2"]
+shape = SubResource("RectangleShape2D_p00iu")
+
+[node name="Polygon2D" type="Polygon2D" parent="Obstacle2"]
+scale = Vector2(2, 2)
+color = Color(0.6627451, 0.42352942, 0.2, 1)
+polygon = PackedVector2Array(-16, 16, -16, -16, 16, -16, 16, 16)
+
+[node name="Obstacle3" type="Area2D" parent="."]
+position = Vector2(2720, 480)
+script = ExtResource("3_htdgb")
+speed_impact = 200.0
+metadata/_custom_type_script = "uid://esphwcmf1e7j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle3"]
+shape = SubResource("RectangleShape2D_p00iu")
+
+[node name="Polygon2D" type="Polygon2D" parent="Obstacle3"]
+scale = Vector2(2, 2)
+color = Color(0.6627451, 0.42352942, 0.2, 1)
+polygon = PackedVector2Array(-16, 16, -16, -16, 16, -16, 16, 16)
+
+[node name="Obstacle4" type="Area2D" parent="."]
+position = Vector2(2080, 480)
+script = ExtResource("3_htdgb")
+speed_impact = 200.0
+metadata/_custom_type_script = "uid://esphwcmf1e7j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle4"]
+shape = SubResource("RectangleShape2D_p00iu")
+
+[node name="Polygon2D" type="Polygon2D" parent="Obstacle4"]
+scale = Vector2(2, 2)
+color = Color(0.6627451, 0.42352942, 0.2, 1)
+polygon = PackedVector2Array(-16, 16, -16, -16, 16, -16, 16, 16)
